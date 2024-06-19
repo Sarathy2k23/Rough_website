@@ -1,0 +1,23 @@
+1 . create virtual env 
+ pip install pipenv
+
+2. activate virtual env 
+pipenv shell
+
+3.Installing django in python for our project
+    pip install django
+4.create a project name for our project
+    django-admin startproject (projectName)-->ParthStudio
+
+
+5.create app for our project
+    django_admin startapp (app_name)-->Firstpage
+this is app we can create many app for our project 
+Eg: bank website contian loan site, balancecheck site like this
+
+6.say to my project i am creating new app for our project
+    in settings.py --->INSTALLED_APPS -->add out (appname)...>Firstpage
+
+7.veiwes.py create what are the fileds we can veiwes
+
+8 create 3 apps Firstpage,Secondpage,Thirdpage
