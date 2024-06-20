@@ -9,5 +9,7 @@ urlpatterns = [
     path('gm/',views.gm),
     path('ga/',views.ga),
     path('ge/',views.ge),
-    path('display/',views.display),   
+    path('display/',views.display),
+    path('db',views.Db), 
+    path('forms',views.form),
 ]

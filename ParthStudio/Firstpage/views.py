@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import datetime
+from Firstpage.models import Student
+from . import forms
+
 
 
 # Create your views here.
@@ -26,7 +29,16 @@ def display(request):
     else:
         mes+=" good eveng"
         
-    
-    name="Hai Sarathy"
     time_dict={"real_date":date,"name":name,"greets":mes,"hour":hour}
     return render(request,'Firstpage/demo.html',context=time_dict)
+
+def Db(request):
+    data=Student.objects.all()
+    Studen_detail={"datas":data}
+    return render(request,'Firstpage/demo.html',context=Studen_detail)
+
+def form(request):
+    fori=forms.Students_forms()
+    form_dict={"form":fori}
+    return render(request,'Firstpage/demo.html',context=form_dict)
+    

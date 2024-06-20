@@ -11,8 +11,20 @@
 <p>{{name}}
 {{greets}}
 {{hour}}
-<img src="{% static 'images/sara photo.jpg' %}" alt="My image">
+<table>
+{% if datas %}
+{% for child in datas%}
+<p>{{child.first_name}}</p><br>
+<p>{{child.last_name}}</p><br>
+<p>{{form.as_p}}</P>
+
+{% endfor %}
+{% endif %}
+</table>
+<p>{{form}}</p>
+
 </P>
+
 
 </body>
 </html>
